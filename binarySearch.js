@@ -24,6 +24,27 @@ function binarySearch(arr, item) {
     return position 
 }
 
-console.log(binarySearch(array, 16))
+// console.log(binarySearch(array, 16))
 
-console.log(count)
+// console.log(count)
+
+// //Сложность алгоритма O(log2n)
+
+
+
+function recursiveBinarySearch(array, item, start, end) {
+    let middle = Math.floor((start + end) / 2);
+    count += 1
+    if (item === array[middle]) { 
+        return middle
+    }
+    if (item < array[middle]) {
+        return recursiveBinarySearch(array, item, 0, middle - 1)
+    }
+    if (item > array[middle]) {
+        return recursiveBinarySearch(array, item, middle + 1, end)
+    }
+}
+
+console.log('Recusive search ' + recursiveBinarySearch(array, 3, 0, array.length))
+console.log('Recursive search count ' + count)

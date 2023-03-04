@@ -12,4 +12,4 @@ function linearSearch(arr, item) {
 
 console.log(linearSearch(arrray, 67))
 console.log('count = ' + count)
-
+// Сложность алгоритма O(n)
